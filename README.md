@@ -1,72 +1,62 @@
 
 
-\# IT 23480186
+# Playwright Assignment 1 - Swift Translator Test Automation
 
-\# Playwright Assignment 1
+Website Under Test: https://www.swifttranslator.com/
 
+---
 
+## Installation & Setup
 
-\## Installation
+1. Clone the repository:
 
+   ```bash
+   git clone https://github.com/dulmini25/ITPM_Playwright_Assignment1.git
+   ```
 
+2. Navigate into the project folder:
 
-1\. Clone the repository:
+   ```bash
+   cd ITPM_Playwright_Assignment1
+   ```
 
-&nbsp;  ```bash
+3. Install project dependencies:
 
-&nbsp;  git clone https://github.com/dulmini25/ITPM\_Playwright\_Assignment1.git
+   ```bash
+   npm install
+   ```
 
-&nbsp;  ```
+4. Install Playwright browsers:
 
-2\. Navigate to the project folder:
+   ```bash
+   npx playwright install
+   ```
 
-&nbsp;  ```bash
+---
 
-&nbsp;  cd ITPM\_Playwright\_Assignment1
+## Running the Tests
 
-&nbsp;  ```
+### Run all tests in headed mode on Chromium:
 
-3\. Install dependencies:
+```bash
+npx playwright test --headed --project=chromium
+```
 
-&nbsp;  ```bash
+### Run only the translator test file:
 
-&nbsp;  npm install
+```bash
+npx playwright test tests/translator.spec.ts --headed --project=chromium
+```
 
-&nbsp;  ```
+---
 
+## Project Structure
 
+- `tests/translator.spec.ts` - Main test script containing positive, negative, and UI test cases  
+- `playwright.config.ts` - Playwright configuration file  
+- `package.json` - Project dependencies and scripts  
+- `.github/workflows/` - GitHub Actions workflow (if included)
 
-\## Running Tests
-
-
-
-\- To run all tests in headed mode on Chromium:
-
-&nbsp; ```bash
-
-&nbsp; npx playwright test --headed --project=chromium
-
-&nbsp; ```
-
-\- To run a specific test file in headed mode on Chromium:
-
-&nbsp; ```bash
-
-&nbsp; npx playwright test tests/translator.spec.ts --headed --project=chromium
-
-&nbsp; ```
-
-
-
-\## Project Structure
-
-
-
-\- `tests/` - contains all Playwright test scripts
-
-\- `playwright.config.ts` - Playwright configuration
-
-\- `package.json` - project dependencies
-
+---
 
 
